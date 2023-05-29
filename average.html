@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Average</title>
+</head>
+
+<body>
+  
+  <script>
+    let students = [
+      {
+        name: 'Namjoon',
+        firstScore: 9,
+        secondScore: 10
+      },
+
+      {
+        name: 'Seokjin',
+        firstScore: 7,
+        secondScore:6
+      },
+
+      {
+        name: 'Jimin',
+        firstScore: 7,
+        secondScore: 7
+      }
+    ]
+
+    function average (firstScore, secondScore) {
+      return (firstScore + secondScore) / 2
+    }
+
+    function printStudentAverage (student) {
+      if(average (student.firstScore, student.secondScore) >=7 ) {
+        alert(`The ${student.name} average is: ${average(student.firstScore, student.secondScore)}.
+        Congratulations ${student.name}, you passed the contest!`)
+      } else {
+		    alert(`The ${student.name} average is: ${average(student.firstScore, student.secondScore)}. 
+		    Not this time ${student.name}, try again.`)
+	}
+    }
+
+    for(let student of students) {
+      printStudentAverage(student)
+      
+    }
+
+  </script>
+
+
+</body>
+</html>
